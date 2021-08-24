@@ -1,6 +1,6 @@
 h2,
 h1 {
-  color: green;
+  color: rebeccapurple;
   text-align: center;
   margin: 0;
 }
@@ -8,12 +8,16 @@ h1 {
 p {
   margin: 0;
 }
-.options-container {
+.main-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.options-container {
+  display: flex;
 }
 .option-item {
-  border: 1px solid red;
   border-radius: 15px;
   width: 200px;
   height: 200px;
@@ -22,6 +26,12 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+.option-item:hover {
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
 }
 .option-item h2 {
   margin-bottom: 25px;
@@ -29,4 +39,46 @@ p {
 }
 .option-item i {
   font-size: 100px;
+  z-index: -10;
+}
+.option-item:active {
+  transform: translateY(10px);
+}
+
+.choose {
+  display: flex;
+  justify-content: center;
+  width: 60vw;
+}
+.choose div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.choose > h3 {
+  width: 100%;
+  align-self: flex-end;
+  color: red;
+  font-size: 25px;
+  text-align: center;
+}
+.choose .pick {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.scoreboard > h4 {
+  font-size: 30px;
+}
+.scoreboard > div {
+  width: 30vw;
+  display: flex;
+  justify-content: space-evenly;
 }
